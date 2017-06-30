@@ -12,11 +12,13 @@ router.get('/', function(req, res, next) {
         if (t) {
             var title, src, text;
             textJson.map(item => {
-                if(item.id == t) {
+                if(+item.id == +t) {
                     title = item.title;
-                    src = item.img;
-                    text = item.tale;
-                    res.render('tales', {title: title, src: src, text: text});
+                    img = item.img;
+                    fl = item.fl;
+                    text = item.text;
+
+                    res.render('tales', {title: title, src: src, img: img, fl: fl, text: text});
                 }
             });
         } else {
