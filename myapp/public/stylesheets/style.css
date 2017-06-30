@@ -1,0 +1,74 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.back {
+  height: 400px;
+  background: url(../images/head.jpg) no-repeat;
+  background-position: top center;
+}
+
+.down {
+  height: 150px;
+  background: url(../images/footer-bg.jpg) repeat-x;
+  background-position: bottom;
+  border: 1px solid black;
+}
+
+.content {
+  width: 900px;
+  margin: auto;
+  border: 1px solid black;
+  position: relative;
+  bottom: 150px;
+}
+
+.content2 {
+  width: 900px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+h3{
+  color: #661d18;
+  text-align: center;
+}
+
+a {
+  font-size: 20px;
+  margin: 20px;
+  color: #661d18;
+  text-decoration: none;
+}
+
+.box{
+  background: url(../images/box.jpg) repeat-y top;
+  width: 29%;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+  float: left;
+}
+
+.forText{
+  width: 68%;
+  display: inline-block;
+  margin: auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+.leftimg {
+  float: left;
+}
+
+.righttimg {
+  float: right;
+}
