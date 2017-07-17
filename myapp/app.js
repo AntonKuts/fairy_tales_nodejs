@@ -6,11 +6,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var main = require('./routes/main');
-var tales = require('./routes/tales');
+var values = require('./routes/values');
+var it = require('./routes/it');
 var contacts = require('./routes/contacts');
-var about = require('./routes/about');
-// var t1 = require('./routes/tales');
+var cv = require('./routes/cv');
+var letter = require('./routes/letter');
+var projects = require('./routes/projects');
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,10 +29,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', main);
-app.use('/tales', tales);
+app.use('/values', values);
+app.use('/it', it);
 app.use('/contacts', contacts);
-app.use('/about', about);
-// app.use('/t1', t1);
+app.use('/cv', cv);
+app.use('/letter', letter);
+app.use('/projects', projects);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,13 +43,9 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
   res.render('error');
 });

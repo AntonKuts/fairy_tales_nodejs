@@ -3,12 +3,46 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    body
-    div(class='back')
-    block content
-    div(class='down')
-      div(class='content2')
-        a(href='/') Главная
-        a(href='/tales') Сказки
-        a(href='/contacts') Контакты
-        a(href='/about') О нас
+  body
+    div(class='container')
+      div(class='header')
+        ul(class='ulForMeny')
+          li(class='liForMeny')
+            a(href='/') Main
+          li(class='liForMeny')
+            a(href='/Values') Values
+          li(class='liForMeny')
+            a(href='/IT') IT
+          li(class='liForMeny')
+            a(href='/Projects') Projects
+          li(class='liForMeny')
+            a(href='/Letter') Letter of recommendation
+          li(class='liForMeny')
+            a(href='/CV') CV
+          li(class='liForMeny')
+            a(href='/Contacts') Contacts
+      div(class='boxForKuts')
+        a(class='kuts', href='/') ANTON KUTS    
+      
+      block content
+          
+      div(class='footer')
+        ul(class='ulForMeny')
+          li(class='liForMeny')
+            a(href='/') Main
+          li(class='liForMeny')
+            a(href='/Values') Values
+          li(class='liForMeny')
+            a(href='/IT') IT
+          li(class='liForMeny')
+            a(href='/Projects') Projects
+          li(class='liForMeny')
+            a(href='/Letter') Letter of recommendation
+          li(class='liForMeny')
+            a(href='/CV') CV
+          li(class='liForMeny')
+            a(href='/Contacts') Contacts
+    <script src="../javascripts/js.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    

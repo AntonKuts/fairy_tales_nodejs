@@ -1,87 +1,316 @@
-body {
-  padding: 0;
-  margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+* {
+  box-sizing: border-box;
 }
 
-.back {
-  height: 400px;
-  background: url(../images/head.jpg) no-repeat;
-  background-position: top center;
+.container {
+  height: auto;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.down {
-  height: 150px;
-  background: url(../images/footer-bg.jpg) repeat-x;
-  background-position: bottom;
-  border: 1px solid black;
+a, p, h1, h2, h3, h4, h5, h6 {
+font-family: "ProximaNova";
+text-transform: uppercase;
 }
 
-.content {
-  width: 900px;
-  margin: auto;
-  border: 1px solid black;
-  position: relative;
-  bottom: 150px;
-  padding: 5px;
-}
-
-.content2 {
-  width: 900px;
-  margin: auto;
-  border: 1px solid black;
-}
-
-h2, h3{
-  color: #661d18;
-  text-align: center;
-}
-
-a {
-  font-size: 20px;
-  margin: 20px;
-  color: #661d18;
+a, p {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .8em;
   text-decoration: none;
 }
 
-.box{
-  background: url(../images/box.jpg) repeat-y top;
-  width: 29%;
-  display: inline-block;
-  border: 1px solid black;
-  box-sizing: border-box;
-  float: left;
+
+a:link {
+    color: #222;
 }
 
-.forText{
-  width: 68%;
-  display: inline-block;
-  margin: auto;
-  border: 1px solid black;
-  padding: 10px;
+a:visited {
+    color: #222;
+}
+
+a:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.10); /* Параметры тени */
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.forIT {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.kuts {
+  font-family: "Portrait";
+  color: #222;
+  letter-spacing: .16em;
+  font-size: 2.0em;
+  line-height: 120%;
+}
+
+.bigBox {
+  margin-top: 30px;
+  height: 330px;
+  width: 960px;
+}
+
+.foto_main{
+  width: 35%;
+  height: 250px;
+  float: left;
+  margin-right: 10px;
+}
+
+.main_text {
+width: 63%;
+height: 250px;
+float: right;
+}
+
+.topic {
+  font-family: "Portrait";
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: .50em;
+  font-size: 1.2em;
+  line-height: 100%;
+  text-align: center;
+}
+
+.boxForKuts {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid black;
+  height: 35px;
+}
+
+.footer {
+  width: 100%;
+  border-top: 1px solid black;
+  height: 35px;
 }
 
 li {
-  list-style-type: none;
-  margin-top: 5px;
+  width: auto;
+  margin: 0 20px;
 }
 
-.leftimg {
+li::after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.liForMeny {
+float: left;
+margin-left: 25px;
+}
+
+.app {
+  display: flex;
+}
+
+aside.primary-aside {
+  width: 200px;
+}
+
+aside.primary-aside a.active {
+    font-weight: bold;
+}
+
+main {
+  flex: 1;
+}
+
+
+.mainBox{
+  width: auto;
+  height: auto;
+  margin: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.img1 {
+  margin-left: 45px;
+  margin-top: 10px;
+  border: 4px outset #2F3061;
+}
+
+p {
+  font-family: "Portrait";
+  margin-bottom: 20px;
+  font-size: .8em;
+  letter-spacing: .07em;
+  line-height: 150%;
+  color: #343434;
+}
+
+.cardForText {
+  width: 260px;
+  height: auto;
+  margin: auto;
+}
+
+.cardForTextSmall1 {
+  width: 175px;
+  height: auto;
   float: left;
 }
 
-.righttimg {
+.cardForTextSmall2 {
+  width: 80px;
+  height: auto;
   float: right;
 }
 
-img{
-  width: 90%;
-  margin-left: 43px;
+span.red {
+  color: red;
 }
 
-span {
-  font-size: 60px;
-  color: #661d18;
+.left {
+  text-align: right;
+}
+
+.loading {
+  font-size: 30px;
+}
+
+.loading:after {
+  overflow: hidden;
   display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+.canva_box{
+  height: auto;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.canva{
+  height: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letter_box{
+  height: auto;
+  width: 960px;
+  /*margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;*/
+}
+
+.letter {
+  width: 100%;
+}
+
+.contact-icons{
+  height: 40px;
+  width: 40px;
+}
+
+.contacts_box {
+  height: 50px;
+  width: 960px;
+}
+
+.contacts_a {
+  margin-right: 20px;
+}
+
+#bigBox{
+  margin-top: 50px;
+  height: 920px;
+  width: 960px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+#mainImeg {
+  height: 710px;
+  width: 958px;
+}
+
+.boxForLi {
+  width: 960px;
+  height: 60px;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+}
+
+.liForFoto {
   float: left;
+  margin-left: 70px;
+}
+
+.boxForBoxs {
+  width: 960px;
+  height: 150px;
+  margin-top: 15px;
+  margin-left: 12px;
+}
+
+.boxForFoto {
+  height: 160px;
+  width: 140px;
+  margin-right: 18px;
+  float: left;
+  text-align: center;
+  align-items: center;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.box {
+  height: 110px;
+  width: 135px;
+  border-bottom: 2px solid black;
+}
+
+#imeg1 {
+  border: 1px solid black;
 }
